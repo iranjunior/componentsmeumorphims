@@ -1,0 +1,25 @@
+.card {
+  padding: 20px;
+  height: 300px;
+  width: 200px; 
+  margin-bottom: 30px;
+}
+.card__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.card__content h2 {
+  font-size: 18px;
+  justify-content: center;
+  margin: 20px auto;
+}
+.card__content p {
+  font-size: 14px;
+  text-align: justify;
+}

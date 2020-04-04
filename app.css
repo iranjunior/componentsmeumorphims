@@ -1,0 +1,79 @@
+
+.App {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 2fr; 
+  height: 100%;
+  gap: 20px;
+}
+.App__Elements {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.App__Elements__Cards {
+  margin: 0px 20px;
+}
+.App__Elements__Buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start; 
+  margin: 0px auto;
+}
+.App__Elements__Switchs {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 20px;
+  align-items: center;
+}
+.App__Elements__Progressives {
+  width: 60%;
+}
+.App__Elements__Actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 40%;
+}
+.App__Elements__Actions__Larges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.App__Elements__Actions__Normals,
+.App__Elements__Actions__Smalls {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+}
+@media only screen and (max-width: 700px) {
+  .App__Elements {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .App__Elements__Switchs{
+    width: 100%;
+    height: 80px;
+    flex-wrap: wrap;
+  }
+  .App__Elements__Actions,
+  .App__Elements__Progressives {
+    width: 100%;
+  }
+  .App__Elements__Cards  {
+    margin: 0px auto;
+  }
+  .App__Elements__Actions__Larges,
+  .App__Elements__Actions__Normals,
+  .App__Elements__Actions__Smalls {
+    align-items: center;
+    padding: 0;
+    justify-content: space-around;
+  }
+}

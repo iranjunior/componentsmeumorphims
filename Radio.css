@@ -1,0 +1,27 @@
+.radio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  margin-bottom: 30px;
+}
+.radio__input {
+  display: none;
+}
+.checkmark {
+  display: block;
+  margin: auto;
+  height: 40%;
+  width: 40%;
+  border-radius: 50%;
+}
+
+.radio__input:checked + .checkmark {
+  background-color: var(--color-background-actived);
+  box-shadow: inset 4px 4px 8px var(--color-shadow-actived),
+              inset -4px -4px 8px var(--color-shadow-actived);
+  transition: 0.5 ease;
+}

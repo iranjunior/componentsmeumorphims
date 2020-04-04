@@ -1,0 +1,32 @@
+:root {
+  --color-bottom-neumorphism: #c9cfd9;
+  --color-top-neumorphism: #ffffff;
+  --color-background: #EDF4FF;
+  --color-background-actived: #5489ff;
+  --color-shadow-actived: #748dc6;
+  --color-font: #78797D;
+}
+svg {
+  fill: var(--color-font);
+}
+#root {
+  font-family: Lato;
+  background-color: var(--color-background);
+  height: 100%;
+}
+
+.neumorphims {
+  background-color: var(--color-background);
+  border: none;
+  box-shadow: 4px 4px 8px var(--color-bottom-neumorphism),
+              -4px -4px 8px var(--color-top-neumorphism);
+  transition: 0.1s;
+}
+.neumorphims-inverse {
+    background-color: var(--color-background);
+  border: none;
+  box-shadow: inset 4px 4px 8px var(--color-bottom-neumorphism),
+              inset -4px -4px 8px var(--color-top-neumorphism);
+  transition: 0.1s;
+  
+}

@@ -1,0 +1,46 @@
+ .switch {
+	 cursor: pointer;
+	 background: var(--color-background);
+	 padding: 7px;
+	 width: 60px;
+	 height: 20px;
+	 border-radius: 33.5px;
+   margin-bottom: 50px;
+}
+ .switch input {
+	 position: absolute;
+	 opacity: 0;
+	 width: 0;
+	 height: 0;
+}
+.switch:focus{
+  outline: 1;
+}
+.toggle {
+  width: 80px;
+  height: 30px;
+  border-radius: 15px;
+  display: block; 
+  transition: 1s;
+}
+.toggle::before {
+  content: '';
+  position: relative;
+  bottom: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-background);
+  box-shadow: 4px 4px 8px var(--color-bottom-neumorphism),
+             -4px -4px 8px var(--color-top-neumorphism);
+  transition: 0.5s ease-out;
+}
+input:checked + .toggle::before {
+    transform: translateX(45px);
+}
+input:checked + .toggle {
+    background-color: var(--color-background-actived);
+    box-shadow: inset 4px 4px 8px var(--color-shadow-actived),
+                inset -4px -4px 8px var(--color-shadow-actived);
+}
