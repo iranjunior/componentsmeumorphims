@@ -4,13 +4,13 @@ import { keyPressAction } from './handles.js';
 
 const Switch = ({checkAction, checked, value}) => {
   return (
-    <label className="switch" tabIndex={0}  onKeyPress={(e) => keyPressAction(e, checkAction, !checked)}>
+    <label className="switch">
       <input 
-      className="switch__checkbox" 
-      onChange={(e) => checkAction(!!e.target.value)}
-      value={value}
-      checked={checked} 
-      type="checkbox" 
+        className="switch__checkbox" 
+        onChange={(e) => checkAction(!!e.target.value)}
+        value={value}
+        checked={checked} 
+        type="checkbox" 
       />
       <span className="toggle neumorphims-inverse"/>
     </label>

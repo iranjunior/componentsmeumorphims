@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import Button, {STYLES_BUTTON} from './Button';
 import Switch from `./Switch`;
 import Radio from `./Radio`;
@@ -17,16 +17,12 @@ const App = () => {
   const [current, setCurrent] = useState(1);
   const [selected, setSelected] = useState('value1');
   const [checkbox, setCheckbox] = useState(false);
-
-  const handleSelect = (value) => {
-   setSelected(value);
-  }
-
-  useEffect(() => { 
-    console.log(checkbox)
-  }, [checkbox]);
-
   const steps = 3
+
+  const handleSelect = useCallback((value) => {
+   setSelected(value);
+  });
+
     return (
       <div className="App">
         <div className="App__Elements" >
@@ -35,7 +31,7 @@ const App = () => {
           </div>
           <div className="App__Elements__Switchs">
             <Switch value={checkbox} checkAction={handleCheckSwitch(setCheckbox)} />
-            <Switch checked />
+            <Switch checked checkAction={handleCheckSwitch(setCheckbox)} />
             <Radio handleCheck={handleSelect} value="value1" selected={selected} />
             <Radio handleCheck={handleSelect} value="value2" selected={selected} />
           </div>

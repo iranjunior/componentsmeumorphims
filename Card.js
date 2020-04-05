@@ -1,12 +1,13 @@
-import React from 'react';
-import path from 'path'
+import React, {useCallback} from 'react'; 
+import {renderIcon} from './utils'
 import './Card.css';
 
 const Card = ({ data }) => {
+
   return (
     <div className="card neumorphims">
       <div className="card__header">
-        <img height={50} src={data.img} />
+        {renderIcon(data.img, 50)}
       </div>
       <div className="card__content">
         <h2>{data.name}</h2>

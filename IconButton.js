@@ -1,18 +1,16 @@
-import React from 'react';
-import './IconButton.css';
+import React, {useCallback} from 'react';
 import Button from './Button';
-import * as Icons from './Icon';
+import { renderIcon } from './utils'
+import './IconButton.css';
 
 const IconButton = ({message, icon , size, ...rest}) =>  {
-  const getIcons = () => {
-    return React.createElement(Icons[icon], {height: size,width: size});
-  }
+  const getIcons = useCallback(renderIcon);
   return (
   <Button
    message={message}
    {...rest} 
    >
-  {getIcons()}
+  {getIcons(icon, {size})}
   </Button>
   )
 }

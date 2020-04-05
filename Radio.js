@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, {useCallback} from 'react';
 import './Radio.css'
 
 const Radio = ({ selected, value, handleCheck }) => {
   
-  const checkAction = (e) => {
+  const checkAction = useCallback((e) => {
     handleCheck(e.target.value);
-  };
+  });
 
 
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import './ProgressiveBar.css';
 
 export const STYLE_PROGRESSIVE = {
@@ -7,9 +7,12 @@ export const STYLE_PROGRESSIVE = {
   STRONG: 'strong',
 }
 const ProgressiveBar = ({ content, size = STYLE_PROGRESSIVE.NORMAL }) => {
+  
+  const calc = useMemo(() => `calc(-${content}% + 35px)`);
+  const contentPercent = useMemo((() => `${content}%`)) 
   return (
     <div className={`progressive-bar neumorphims-inverse ${size}`} data-content={content}>
-      <span className="ballon neumorphims" style={{right: `calc(-${content}% + 35px`}} >{content}%</span>
+      <span className="ballon neumorphims" style={{right: calc }} >{contentPercent}</span>
       <div 
         className="progressive-bar__content" 
         style={{width: `${content}%`}}

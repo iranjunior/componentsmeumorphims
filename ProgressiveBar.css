@@ -4,14 +4,30 @@
   margin-bottom: 40px;
   display: inline-flex; 
 }
-.progressive-bar.normal {
+.normal {
   height: 20px
 }
-.progressive-bar.light {
-  height: 10px
+.normal .ballon {
+  height: 15px;
+  font-size: 16px;
+  bottom: 40px;
 }
-.progressive-bar.strong {
+.light {
+  height: 10px;
+}
+.light .ballon {
+  height: 10px;
+  font-size: 14px;
+  bottom: 30px;
+}
+.strong {
   height: 40px
+}
+
+.strong .ballon {
+  height: 20px;
+  font-size: 18px;
+  bottom: 40px;
 }
 .progressive-bar__content {
   height: 100%;
@@ -27,13 +43,11 @@
 }
 .ballon {
   width: 35px;
-  height: 10px;
   background-color: #fff;
   position: relative;
   right: calc(-100% + 35px);
   font-size: 14px;
   padding: 5px;
-  bottom: 30px;
   display: block;
   border-radius: 5px;
   animation: show .5s linear;
@@ -46,8 +60,18 @@
   border-left: 5px solid transparent;
   border-top: 10px solid #fff;
   position: relative;
+}
+.light .ballon::after {
   top: 220%;
   right: 40%;
+}
+.normal .ballon::after {
+  top: 180%;
+  right: 50%;
+}
+.strong .ballon::after {
+  top: 160%;
+  right: 60%;
 }
 @keyframes show {
   0% {
