@@ -2,38 +2,41 @@
 .button {
   height: 3.125rem;
   width: 100%;
-  border-radius: 1.563rem;
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: var(--color-font);
   margin-bottom: 30px;
-  display: flex;
-  justify-content: space-around;
 }
-.large {
+.button.large {
   width: 80%;
 }
-.normal {
+.button.normal {
   width: calc(6.26rem + 10%);
 }
-.small {
+.button.small {
   width: 6.26rem;
 }
-.cicle {
+.btn.cicle {
   height: 3.125rem;
   width: 3.125rem;
   border-radius: 50%;
 }
-.square {
+.btn.square {
   height: 3.125rem;
   width: 3.125rem;
   border-radius: 1rem;
 }
-
-.button:focus {
+.btn {
+  height: 100%;
+  width: 100%;
+  border-radius: 1.563rem;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--color-font);
+  display: flex;
+  justify-content: space-around;
+}
+.btn:focus {
   outline: none;
 }
-.button:active {
+.btn:active {
   box-shadow: inset 6px 6px 12px var(--color-bottom-neumorphism),
              inset -6px -6px 12px var(--color-top-neumorphism);
   transform: scale(0.95);

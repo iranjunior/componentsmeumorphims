@@ -2,25 +2,30 @@ import React from 'react'
 import './Button.css'
 
 export const STYLES_BUTTON = {
-  CICLE: 'cicle',
+  TYPE:{CICLE: 'cicle',
   SQUARE: 'square',
+  NORMAL: 'normal',
+  },
+  SIZE:{
   SMALL: 'small',
   LARGE: 'large',
   NORMAL: 'normal',
+  }
 }
 
 const Button = ({
   children = null , 
-  style = STYLES_BUTTON.NORMAL, 
+  size = STYLES_BUTTON.SIZE.NORMAL, 
+  type= STYLES_BUTTON.TYPE.NORMAL,
   message, 
   handleClick, 
   disabled
   }) =>  {
-    
+
   return(
-    <div className={`button ${style}`}>
+    <div className={`button ${size}`}>
       <button 
-        className={`button neumorphims`} 
+        className={`btn neumorphims ${type}`} 
         disabled={disabled} 
         onClick={handleClick} 
         >

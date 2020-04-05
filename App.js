@@ -36,26 +36,26 @@ const App = () => {
             <Radio handleCheck={handleSelect} value="value2" selected={selected} />
           </div>
           <div className="App__Elements__Buttons">
-            <IconButton icon="ArrowRightIcon" size={16} style={STYLES_BUTTON.SQUARE} />
-            <IconButton icon="PauseIcon" size={16} style={STYLES_BUTTON.SQUARE} />
-            <IconButton icon="ArrowLeftIcon" size={16} style={STYLES_BUTTON.SQUARE} />
+            <IconButton icon="ArrowRightIcon" sizeIcon={16} type={STYLES_BUTTON.TYPE.SQUARE} size={STYLES_BUTTON.SIZE.SMALL}/>
+            <IconButton icon="PauseIcon" sizeIcon={16} type={STYLES_BUTTON.TYPE.SQUARE} size={STYLES_BUTTON.SIZE.SMALL} />
+            <IconButton icon="ArrowLeftIcon" sizeIcon={16} type={STYLES_BUTTON.TYPE.SQUARE} size={STYLES_BUTTON.SIZE.SMALL} />
             <Select />
           </div>
         </div>
         <div className="App__Elements" >
           <div className="App__Elements__Actions">
           <div className="App__Elements__Actions__Larges">
-            <InputText />
-            <Button message="Button" style={STYLES_BUTTON.LARGE}/>
+            <InputText placeHolder="Pesquisar..."/>
+            <Button message="Button" size={STYLES_BUTTON.SIZE.LARGE}/>
           </div>
           <div className="App__Elements__Actions__Normals">
-            <IconButton icon="PlusIcon" size={16} style={STYLES_BUTTON.CICLE} />
-            <IconButton icon="ShareIcon" size={16} message="Share" />
+            <IconButton icon="PlusIcon" sizeIcon={16} type={STYLES_BUTTON.TYPE.CICLE}  size={STYLES_BUTTON.SIZE.SMALL}/>
+            <IconButton icon="ShareIcon" sizeIcon={16} message="Share" />
           </div>
           <div className="App__Elements__Actions__Smalls" >
-            <IconButton icon="HeartIcon" size={16} style={STYLES_BUTTON.SQUARE} />
-            <IconButton icon="CommentsIcon" size={16} style={STYLES_BUTTON.SQUARE} />
-            <IconButton icon="BookMarkIcon" size={16} style={STYLES_BUTTON.SQUARE} />
+            <IconButton icon="HeartIcon" sizeIcon={16} type={STYLES_BUTTON.TYPE.SQUARE} size={STYLES_BUTTON.SIZE.SMALL} />
+            <IconButton icon="CommentsIcon" sizeIcon={16} type={STYLES_BUTTON.TYPE.SQUARE} size={STYLES_BUTTON.SIZE.SMALL} />
+            <IconButton icon="BookMarkIcon" sizeIcon={16} type={STYLES_BUTTON.TYPE.SQUARE} size={STYLES_BUTTON.SIZE.SMALL} />
           </div>
           </div>
           <div className="App__Elements__Progressives">

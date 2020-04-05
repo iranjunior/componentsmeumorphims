@@ -7,7 +7,7 @@ const Card = ({ data }) => {
   return (
     <div className="card neumorphims">
       <div className="card__header">
-        {renderIcon(data.img, 50)}
+        {renderIcon(data.img, {size: 50})}
       </div>
       <div className="card__content">
         <h2>{data.name}</h2>
